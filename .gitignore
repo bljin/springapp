@@ -1,5 +1,5 @@
-war/WEB-INF/classes/*
-war/WEB-INF/lib/*
-bin
-.settings
-.gitignore
+/war/WEB-INF/classes/*
+/war/WEB-INF/lib/*
+/bin
+/.settings
+/.gitignore
