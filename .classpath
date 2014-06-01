@@ -8,5 +8,7 @@
 	<classpathentry kind="lib" path="war/WEB-INF/lib/spring.jar"/>
 	<classpathentry kind="lib" path="D:/Program Files/apache-tomcat-7.0.50/lib/servlet-api.jar"/>
 	<classpathentry kind="lib" path="D:/j2ee/library/maven/repository/junit/junit/4.8.1/junit-4.8.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
