@@ -11,7 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class HelloController {
+public class HelloController  implements Controller  {
 	protected final Log logger = LogFactory.getLog(getClass());
 	
 	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse reponse)
