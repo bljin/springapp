@@ -1,4 +1,0 @@
-mystest first line
-second line
-third line
-fourth 6 7
