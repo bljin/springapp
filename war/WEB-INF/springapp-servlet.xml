@@ -17,37 +17,51 @@
 		</property>
 	</bean>
 
-    <bean id="product1" class="springapp.domain.Product">
-        <property name="description" value="Lamp"/>
-        <property name="price" value="5.75"/>
-    </bean>
-        
-    <bean id="product2" class="springapp.domain.Product">
-        <property name="description" value="Table"/>
-        <property name="price" value="75.25"/>
-    </bean>
-
-    <bean id="product3" class="springapp.domain.Product">
-        <property name="description" value="Chair"/>
-        <property name="price" value="22.79"/>
-    </bean>
-
-    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
-        <property name="basename" value="messages"/>
-    </bean>
-
-
-
-	<bean name="/hello.htm" class="springapp.web.HelloController" />
-	<bean name="/inventory.htm" class="springapp.web.InventoryController">
-		<property name = "productManger" ref = "ProductManager"></property>
+	<bean id="product1" class="springapp.domain.Product">
+		<property name="description" value="Lamp" />
+		<property name="price" value="5.75" />
 	</bean>
 
+	<bean id="product2" class="springapp.domain.Product">
+		<property name="description" value="Table" />
+		<property name="price" value="75.25" />
+	</bean>
+
+	<bean id="product3" class="springapp.domain.Product">
+		<property name="description" value="Chair" />
+		<property name="price" value="22.79" />
+	</bean>
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename" value="messages" />
+	</bean>
+
+	<bean name="/hello.htm" class="springapp.web.HelloController">
+	</bean>
+
+	<bean name="/inventory.htm" class="springapp.web.InventoryController">
+		<property name="productManager" ref="productManager" />
+	</bean>
+
+	<bean name="/priceincrease.htm" class="springapp.web.PriceIncreaseFormController">
+		<property name="sessionForm" value="true" />
+		<property name="commandName" value="priceIncrease" />
+		<property name="commandClass" value="springapp.service.PriceIncrease" />
+		<property name="validator">
+			<bean class="springapp.service.PriceIncreaseValidator" />
+		</property>
+		<property name="formView" value="priceincrease" />
+		<property name="successView" value="inventory.htm" />
+		<property name="productManager" ref="productManager" />
+	</bean>
+	
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="viewClass"
-			value="org.springframework.web.servlet.view.JstlView"></property>
-		<property name="prefix" value="/WEB-INF/jsp/"></property>
-		<property name="suffix" value=".jsp"></property>
+			value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
 	</bean>
+
 </beans>
