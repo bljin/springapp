@@ -19,6 +19,6 @@ public class HelloController  implements Controller  {
 		throws ServletException, IOException {
 		String now = (new Date()).toString();
 		logger.info("Return Hello View" + now);
-		return new ModelAndView("WEB-INF/jsp/hello.jsp", "now", now);
+		return new ModelAndView("hello", "now", now);
 	}
 }
