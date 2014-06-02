@@ -1,3 +1,4 @@
+<!-- 
 <html>
 	<head><title> Example:: Spring Application </title></head>
 	<body>
@@ -5,3 +6,6 @@
 		<p> This is my Spring app Test. </p>
 	</body>
 </html>
+ -->
+<%@ include file="/WEB-INF/jsp/include.jsp" %>
+<c:redirect url="/hello.htm"/>
